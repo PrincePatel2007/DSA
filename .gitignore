@@ -1,0 +1,12 @@
+# 1. Ignore everything by default
+*
+
+# 2. Allow Git to look inside ALL folders and subfolders
+!*/
+
+# 3. Whitelist your C source files and headers anywhere in the project
+!**/*.c
+
+# 4. Whitelist important project files
+!.gitignore
+!README.md
