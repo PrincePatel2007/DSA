@@ -1,4 +1,4 @@
-# University Exam Solutions
+# DSA Questions Solutions
 
 This repository contains my personal solutions to lab and class assignment questions.
 
