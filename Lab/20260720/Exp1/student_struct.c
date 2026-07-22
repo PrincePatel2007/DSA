@@ -16,11 +16,12 @@ int main() {
         printf("Enter Roll no (int only): ");
         scanf("%d", &s[i].roll_no);
         printf("Enter address (): ");
-        scanf("%s", s[i].address);
+        //scanf("%s", s[i].address); (Removed line)
+        scanf(" %[^\n]", s[i].address);  //To allow space character work properly
     }
 
     for (int i=0; i<5; i++) {
-        printf("Student %d details:- \n Name: %s \n Roll no: %d \n Address: %s \n", i+1, s[i].name, s[i].roll_no, s[i].address);
+        printf("Student %d details:- \n Name:    %s \n Roll no: %d \n Address: %s \n", i+1, s[i].name, s[i].roll_no, s[i].address);
     }
     return 0;
 
