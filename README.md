@@ -3,7 +3,7 @@
 This repository contains my personal solutions to lab and class assignment questions.
 
 ## 📁 Repository Structure
-The project uses a deeply nested folder structure to organize questions by semester, course, and topic. 
+The project uses a nested folder Structure to organize files, subfolders with names like 20260720 represents date on which task was given in YYYYMMDD format.
 
 ## 🚀 Getting Started
 
