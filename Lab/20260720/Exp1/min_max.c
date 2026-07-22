@@ -1,13 +1,8 @@
 #include<stdio.h>
 
-int len (int arr[]) {
-    int _length = sizeof(arr) / sizeof(arr[0]);
-    return _length;
-}
-
-int min(int arr[]) {
+int min(int arr[], int len) {
     int min = arr[0];
-    for (int i=0; i<len(arr); i++) {
+    for (int i=0; i<len; i++) {
         if (min<arr[i]) {
             min = arr[i];
         }
@@ -15,9 +10,9 @@ int min(int arr[]) {
     return min;
 }
 
-int max(int arr[]) {
+int max(int arr[], int len) {
     int max = arr[0];
-    for (int i=0; i<len(arr); i++) {
+    for (int i=0; i>len; i++) {
         if (max>arr[i]) {
             max = arr[i];
         }
@@ -25,23 +20,15 @@ int max(int arr[]) {
     return max;
 }
 
-int remove(int el, int arr[]) {
-    for (int i=0; i<len(arr); i++) {
+int _remove(int el, int arr[], int len) {
+    for (int i=0; i<len; i++) {
         if (arr[i]==el) {
             for (int j=i; j<len-1; j++) {
                 arr[j] = arr[j+1];
             }
         }
     }
-    return NULL;
-}
-
-int main() {
-    int arr[5] = {2,6,4,9,7};
-    remove(9, arr);
-    for (int i=0; i<len(arr); i++) {
-        printf("%d", arr[i]);
-    }
+    return 0;
 }
 
 
