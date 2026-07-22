@@ -12,5 +12,7 @@ To compile and run the solutions, you need a C compiler installed on your system
 *   **GCC** (Linux/macOS)
 *   **MinGW** (Windows)
 
+Or simply use Codeblocks as suggested by University
+
 ## 📜 License
 This repository is for educational purposes only. Please use these solutions responsibly as a reference for your own learning.
