@@ -17,10 +17,11 @@ int main() {
         scanf("%d", &s[i].roll_no);
         printf("Enter Address: ");
         scanf(" %[^\n]", s[i].address);  //To allow space character work properly
+        printf("\n");
     }
 
     for (int i=0; i<5; i++) {
-        printf("Student %d details:- \n Name:    %s \n Roll no: %d \n Address: %s \n", i+1, s[i].name, s[i].roll_no, s[i].address);
+        printf("Student %d details:- \n Name:    %s \n Roll no: %d \n Address: %s \n\n", i+1, s[i].name, s[i].roll_no, s[i].address);
     }
     return 0;
 
