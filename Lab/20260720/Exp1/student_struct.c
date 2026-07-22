@@ -12,11 +12,10 @@ int main() {
     for (int i=0; i<5; i++) {
         printf("Enter Student %d details: \n", i+1);
         printf("Enter Student name: ");
-        scanf("%s", s[i].name);
+        scanf(" %[^\n]", s[i].name);  //To allow space character work properly
         printf("Enter Roll no (int only): ");
         scanf("%d", &s[i].roll_no);
-        printf("Enter address (): ");
-        //scanf("%s", s[i].address); (Removed line)
+        printf("Enter Address: ");
         scanf(" %[^\n]", s[i].address);  //To allow space character work properly
     }
 
