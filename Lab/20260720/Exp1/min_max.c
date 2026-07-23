@@ -33,20 +33,19 @@ int _remove(int el, int arr[], int len) {
     return 0;
 }
 
-/*int main() {
-    int arr[5] = {2, 8, 5, 9, 4};
-    int len = 5;
-    _remove(9, arr, len);
-    for (int i=0; i<len-1; i++) {
-        printf("%d   ", arr[i]);
-    }
-
-    return 0;
-}*/
-
 int min_2 (int arr[], int len) {
     _remove(min(arr, len), arr, len);
     return min(arr, len-1);
+}
+
+int main() {
+    int arr[5] = {2, 8, 5, 9, 4};
+    int len = 5;
+    printf("%d", min_2(arr, 5);
+    for (int i=0; i<len-1; i++) {
+        printf("%d   ", arr[i]);
+    }
+    return 0;
 }
 
 
