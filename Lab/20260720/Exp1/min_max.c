@@ -27,6 +27,7 @@ int _remove(int el, int arr[], int len) {
                 arr[j] = arr[j+1];
             }
             arr[len-1] = 0;
+            break;
         }
     }
     return 0;
