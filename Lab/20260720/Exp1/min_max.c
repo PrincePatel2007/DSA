@@ -41,7 +41,7 @@ int min_2 (int arr[], int len) {
 int main() {
     int arr[5] = {2, 8, 5, 9, 4};
     int len = 5;
-    printf("%d", min_2(arr, 5);
+    printf("%d", min_2(arr, 5));
     for (int i=0; i<len-1; i++) {
         printf("%d   ", arr[i]);
     }
