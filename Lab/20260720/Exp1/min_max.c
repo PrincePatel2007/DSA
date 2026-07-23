@@ -3,7 +3,7 @@
 int min(int arr[], int len) {
     int min = arr[0];
     for (int i=0; i<len; i++) {
-        if (min<arr[i]) {
+        if (min>arr[i]) {
             min = arr[i];
         }
     }
@@ -12,8 +12,8 @@ int min(int arr[], int len) {
 
 int max(int arr[], int len) {
     int max = arr[0];
-    for (int i=0; i>len; i++) {
-        if (max>arr[i]) {
+    for (int i=0; i<len; i++) {
+        if (max<arr[i]) {
             max = arr[i];
         }
     }
@@ -32,7 +32,7 @@ int _remove(int el, int arr[], int len) {
     return 0;
 }
 
-int main() {
+/*int main() {
     int arr[5] = {2, 8, 5, 9, 4};
     int len = 5;
     _remove(9, arr, len);
@@ -41,6 +41,11 @@ int main() {
     }
 
     return 0;
+}*/
+
+int min_2 (int arr[], int len) {
+    _remove(min(arr, len), arr, len);
+    return min(arr, len-1);
 }
 
 
