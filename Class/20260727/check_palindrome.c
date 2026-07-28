@@ -25,10 +25,11 @@ int main() {
     }
     for (int i=0; i<actual_len(arr); i++) {
         printf("%d", neutralize(arr[i])); // debugging
-        printf("=%d ", new_arr[actual_len(arr)-i]); // debugging
-        if (neutralize(arr[i])!=new_arr[actual_len(arr)-i]) {
+        printf("=%d ", new_arr[actual_len(arr)-i-1]); // debugging
+        printf("\n");
+        if (neutralize(arr[i])!=new_arr[actual_len(arr)-i-1]) {
             is_palindrome = 0;
-            //break; debugging
+            break;
         }
     }
     printf("Palindrome status: %d", is_palindrome);
