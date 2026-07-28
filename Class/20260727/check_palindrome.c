@@ -28,6 +28,13 @@ int main() {
             break;
         }
     }
-    printf("Palindrome status: %d", is_palindrome);
+
+    if (is_palindrome==1) {
+        printf("String is palindrome");
+    }
+    else {
+        printf("String is not palindrome");
+    }
+
     return 0;
 }
