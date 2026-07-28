@@ -10,7 +10,7 @@ int main() {
         }
     }
 
-    printf("Enter the elements of second 3x3 matrix:\n");
+    printf("\nEnter the elements of second 3x3 matrix:\n");
     for (int i=0; i<3; i++) {
         printf("\n");
         for (int j=0; j<3; j++) {
