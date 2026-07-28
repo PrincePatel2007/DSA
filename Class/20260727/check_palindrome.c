@@ -12,7 +12,6 @@ int actual_len(char *arr) {
     while (arr[count]!='\0') {
         count++;
     }
-    count++;
     return count;
 }
 
