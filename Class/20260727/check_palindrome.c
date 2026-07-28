@@ -10,23 +10,25 @@ int neutralize(char ch) {
 int actual_len(char *arr) {
     int count=0;
     while (arr[count]!='\0') {
-        count+-1;
+        count++;
     }
-    count+=1;
+    count++;
     return count;
 }
 
 int main() {
     char arr[50] = "Worrongongegnognorrow";
     char new_arr[50];
+    int is_palindrome = 1;
     for (int i=0; i<actual_len(arr); i++) {
         new_arr[i] = neutralize(arr[i]);
     }
-    if (arr==new_arr) {
-        printf("Its palindrome");
+    for (int i=0; i<actual_len(arr); i++) {
+        if (arr[i]!=new_arr[actual_len(arr)-i]) {
+            is_palindrome = 0;
+            break;
+        }
     }
-    else {
-        printf("Its not palindrome");
-    }
+    printf("Palindrome status: %d", is_palindrome);
     return 0;
 }
