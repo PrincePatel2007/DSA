@@ -63,6 +63,7 @@ int main() {
         printf("%d ", s.array[i]);
     }
     printf("\n");
+    push(25);
     pop();
     pop();
     push(50);
