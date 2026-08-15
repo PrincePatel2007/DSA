@@ -26,7 +26,7 @@ int _remove(int el, int arr[], int len) {
             for (int j=i; j<len-1; j++) {
                 arr[j] = arr[j+1];
             }
-            arr[len-1] = 0;
+            len--;
             break;
         }
     }
@@ -38,10 +38,15 @@ int min_2 (int arr[], int len) {
     return min(arr, len-1);
 }
 
+int max_2 (int arr[], int len) {
+    _remove(max(arr, len), arr, len);
+    return max(arr, len-1);
+}
+
 int main() {
-    int arr[5] = {2, 8, 5, 9, 4};
-    int len = 5;
-    printf("%d\n", min_2(arr, len));
+    int arr[5] = {2, 8, 5, 0, 4};
+    int len = sizeof(arr)/sizeof(arr[0]);
+    printf("%d\n", max_2(arr, len));
     for (int i=0; i<len-1; i++) {
         printf("%d   ", arr[i]);
     }
