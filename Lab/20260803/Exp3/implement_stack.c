@@ -17,16 +17,16 @@ void push(int ele) {
         s.array[++s.top] = ele;
     }
     else {
-        printf("Stack Overflow");
+        printf("\nStack Overflow");
     }
 }
 
 void pop() {
     if (!isEmpty()) {
-        printf("%d", s.array[s.top--]);
+        printf("\nPopped element is : %d", s.array[s.top--]);
     }
     else {
-        printf("Stack Underflow");
+        printf("\nStack Underflow");
     }
 }
 
@@ -48,22 +48,21 @@ int isFull() {
     }
 }
 
-int peak() {
-    return s.array[s.top];
+void peak() {
+    printf("\nPeak : %d", s.array[s.top]);
 }
 
 int main() {
     s.top = -1;
     s.capacity = 10;
-    int no_of_ele;
-    scanf("%d", &no_of_ele);
-    for (int i = 0; i < no_of_ele; i++) {
+    for (int i = 0; i < s.capacity; i++) {
         scanf("%d", &s.array[i]);
+        s.top++;
     }
-    for (int i = 0; i < no_of_ele; i++) {
+    for (int i = 0; i < s.capacity; i++) {
         printf("%d ", s.array[i]);
     }
-    push(40);
+    printf("\n");
     pop();
     pop();
     push(50);
