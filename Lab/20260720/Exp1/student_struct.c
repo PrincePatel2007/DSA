@@ -7,20 +7,23 @@ struct Student {
 };
 
 int main() {
-    struct Student s[5];
+    int len = 5;
 
-    for (int i=0; i<5; i++) {
+    struct Student s[len];
+
+    for (int i=0; i<len; i++) {
         printf("\nEnter Student %d details: \n", i+1);
         printf("Enter Student name: ");
-        scanf(" %[^\n]", s[i].name);  //To allow space character work properly
+        fgets(s[i].name, sizeof(s[i].name), stdin);
         printf("Enter Roll no (int only): ");
         scanf("%d", &s[i].roll_no);
+        scanf("%*c");
         printf("Enter Address: ");
-        scanf(" %[^\n]", s[i].address);  //To allow space character work properly
+        fgets(s[i].address, sizeof(s[i].address), stdin);
     }
 
-    for (int i=0; i<5; i++) {
-        printf("\nStudent %d details:- \n Name:    %s \n Roll no: %d \n Address: %s \n", i+1, s[i].name, s[i].roll_no, s[i].address);
+    for (int i=0; i<len; i++) {
+        printf("\nStudent %d details:- \n Name:    %s  Roll no: %d \n Address: %s \n", i+1, s[i].name, s[i].roll_no, s[i].address);
     }
     return 0;
 
