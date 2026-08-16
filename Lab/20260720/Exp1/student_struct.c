@@ -27,6 +27,7 @@ int main() {
     post_details(&s1);
     post_details(&s2);
     post_details(&s3);
+    printf("\nDetails of Students:\n");
     get_details(&s1);
     get_details(&s2);
     get_details(&s3);
