@@ -10,6 +10,8 @@ struct Stack {
     int array[10];
 };
 
+// Code unprofessional
+
 struct Stack s;
 
 void push(int ele) {
