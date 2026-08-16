@@ -1,16 +1,14 @@
 #include <stdio.h>
-#include <string.h> 
+#include <string.h>
 
 struct String {
     char str[50];
-    char reversed_str[50];
+    char reverse_str[50];
     int top;
 };
 
-struct String s;
-
-int isEmpty () {
-    if (s.top == -1) {
+int isEmpty(struct String *s) {
+    if (s->top == -1) {
         return 1;
     }
     else {
@@ -18,27 +16,24 @@ int isEmpty () {
     }
 }
 
-char pop() {
-    return s.str[s.top--];
+char pop(struct String *s) {
+    return (s->str[s->top--]);
 }
 
-int reverse(s.str) {
+void reverse(struct String *s) {
     int i = 0;
-    while (!isEmpty(s.top)) {
-        s.reversed_str[i++] = pop();
+    while(!isEmpty(s)) {
+        s->reverse_str[i++] = pop(s);
     }
-    s.reversed_str[i] = '\0';
-    return i;
+    s->reverse_str[i] = '\0';
 }
 
 int main() {
+    struct String s1;
     printf("Enter the string to be reversed: ");
-    fgets(s.str, 50, stdin);
-    s.top = strlen(s.str) - 1;
-    int temp_top = s.top;
-    reverse(s.str);
-    for (int i=0; i<=temp_top; i++) {
-        printf("%c", s.reversed_str[i]);
-    }
+    fgets(s1.str, 50, stdin);
+    s1.top = strlen(s1.str) - 1;
+    reverse(&s1);
+    printf("Reversed string: %s\n", s1.reverse_str);
     return 0;
 }
