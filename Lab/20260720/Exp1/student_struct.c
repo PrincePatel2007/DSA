@@ -1,5 +1,7 @@
 #include<stdio.h>
 
+// Code unprofessional
+
 struct Student {
     char name[50];
     int roll_no;
