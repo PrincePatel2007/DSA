@@ -44,7 +44,11 @@ int max_2 (int arr[], int len) {
 }
 
 int main() {
-    int arr[5] = {2, 8, 5, 0, 4};
+    int arr[5];
+    for (int i=0; i<5; i++) {
+        printf("Enter element %d: ", i+1);
+        scanf("%d", &arr[i]);
+    }
     int len = sizeof(arr)/sizeof(arr[0]);
     printf("Largest element is %d\n", max(arr, len));
     printf("Smallest element is %d\n", min(arr, len));
