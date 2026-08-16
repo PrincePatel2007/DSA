@@ -1,74 +1,89 @@
 #include <stdio.h>
 
-// Function declarations
-int isEmpty();
-int isFull();
+#define MAX 10
 
 struct Stack {
     int top;
     int capacity;
-    int array[10];
+    int array[MAX];
 };
 
-// Code unprofessional
+int isEmpty(struct Stack *s) {
+    if (s->top == -1) {
+        return 1;
+    }
+    else {
+        return 0;
+    }
+    }
 
-struct Stack s;
+int isFull(struct Stack *s) {
+    if (s->top == s->capacity - 1) {
+        return 1;
+    }
+    else {
+        return 0;
+    }
+}
 
-void push(int ele) {
-    if (!isFull()) {
-        s.array[++s.top] = ele;
+void push(int ele, struct Stack *s) {
+    if (!isFull(s)) {
+        s->array[++s->top] = ele;
     }
     else {
         printf("\nStack Overflow");
     }
 }
 
-void pop() {
-    if (!isEmpty()) {
-        printf("\nPopped element is : %d", s.array[s.top--]);
+void pop(struct Stack *s) {
+    if (!isEmpty(s)) {
+        printf("\nPopped element is : %d", s->array[s->top--]);
     }
     else {
         printf("\nStack Underflow");
     }
 }
 
-int isEmpty() {
-    if (s.top == -1) {
-        return 1;
-    }
-    else {
-        return 0;
-    }
-    }
-
-int isFull() {
-    if (s.top == s.capacity - 1) {
-        return 1;
-    }
-    else {
-        return 0;
-    }
+void peak(struct Stack *s) {
+    printf("\nPeak : %d", s->array[s->top]);
 }
 
-void peak() {
-    printf("\nPeak : %d", s.array[s.top]);
+void traverse(struct Stack *s) {
+    for (int i = s->top - 1; i <= 0; i--) {
+        printf("%d", s->array[s->top]);
+    }
 }
 
 int main() {
-    s.top = -1;
-    s.capacity = 10;
-    for (int i = 0; i < s.capacity; i++) {
-        scanf("%d", &s.array[i]);
-        s.top++;
-    }
-    for (int i = 0; i < s.capacity; i++) {
-        printf("%d ", s.array[i]);
-    }
-    printf("\n");
-    push(25);
-    pop();
-    pop();
-    push(50);
-    peak();
+    struct Stack stack1;
+    stack1.top = -1;
+    stack1.capacity = 10;
+    printf("Max capacity of Stack here is 10\n\n");
+    int exit = 0;
+    do {
+        printf("\n\nOptions available are:-\n1. Push\n2. Pop\n3. Peak\n4. Traverse\n5. Exit\n\n");
+        int choice;
+        scanf("%d", &choice);
+        switch (choice) {
+            case 1:
+                printf("Enter element to push: ");
+                int num;
+                scanf("%d", &num);
+                push(num, &stack1);
+                break;
+            case 2:
+                pop(&stack1);
+                break;
+            case 3:
+                peak(&stack1);
+                break;
+            case 4:
+                traverse(&stack1);
+                break;
+            case 5:
+                exit = 1;
+                break;
+        }
+    } while (exit!=1);
     return 0;
 }
