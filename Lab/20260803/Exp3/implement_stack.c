@@ -57,7 +57,7 @@ void traverse(struct Stack *s) {
 int main() {
     struct Stack stack1;
     stack1.top = -1;
-    stack1.capacity = 10;
+    stack1.capacity = MAX;
     printf("Max capacity of Stack here is 10\n\n");
     int exit = 0;
     do {
