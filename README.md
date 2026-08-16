@@ -9,7 +9,7 @@ The project uses a nested folder Structure to organize files, subfolders with na
 
 ### Prerequisites
 To compile and run the solutions, you need a C compiler installed on your system:
-*   **GCC** (Linux/macOS)
+*   **GCC / Clang** (Linux/macOS)
 *   **MinGW** (Windows)
 
 Or simply use Codeblocks as suggested by University
