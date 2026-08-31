@@ -78,7 +78,7 @@ int search(int value) {
 }
 
 // 6. DISPLAY the list
-void display(void) {
+void traverse(void) {
     node *temp = head;
     while (temp != NULL) {
         printf("%d -> ", temp->data);
@@ -91,7 +91,7 @@ int main() {
     insertAtEnd(10);
     insertAtEnd(20);
     insertAtBeginning(5);
-    display(); // 5 -> 10 -> 20 -> NULL
+    traverse(); // 5 -> 10 -> 20 -> NULL
 
     printf("Found 10 at position: %d\n", search(10));
     printf("Found 20 at position: %d\n", search(20));
@@ -99,7 +99,7 @@ int main() {
     printf("Found 15 at position: %d\n", search(15));
 
     deleteNode(10);
-    display(); // 5 -> 20 -> NULL
+    traverse(); // 5 -> 20 -> NULL
 
     return 0;
 }
