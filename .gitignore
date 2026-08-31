@@ -6,6 +6,7 @@
 
 # 3. Whitelist your C source files and headers anywhere in the project
 !**/*.c
+!**/*.cpp
 
 # 4. Whitelist important project files
 !.gitignore
