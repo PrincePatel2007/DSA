@@ -6,10 +6,8 @@ typedef struct node {
     struct node *next;
 } node;
 
-// Global head pointer
 node *head = NULL;
 
-// 1. CREATE a new node
 node* createNode(int value) {
     node *newNode = (node*)malloc(sizeof(node));
     newNode->data = value;
@@ -17,14 +15,12 @@ node* createNode(int value) {
     return newNode;
 }
 
-// 2. INSERT at the beginning
 void insertAtBeginning(int value) {
     node *newNode = createNode(value);
     newNode->next = head;
     head = newNode;
 }
 
-// 3. INSERT at the end
 void insertAtEnd(int value) {
     node *newNode = createNode(value);
 
@@ -40,11 +36,10 @@ void insertAtEnd(int value) {
     temp->next = newNode;
 }
 
-// 4. DELETE a node by value
 void deleteNode(int value) {
-    if (head == NULL) return;
+    if (head == NULL)
+        return;
 
-    // Special case: deleting the head itself
     if (head->data == value) {
         node *temp = head;
         head = head->next;
@@ -64,7 +59,6 @@ void deleteNode(int value) {
     }
 }
 
-// 5. SEARCH for a value
 int search(int value) {
     int position = 0;
     node *temp = head;
@@ -77,7 +71,7 @@ int search(int value) {
     return -1;
 }
 
-// 6. DISPLAY the list
+
 void traverse(void) {
     node *temp = head;
     while (temp != NULL) {
@@ -91,7 +85,7 @@ int main() {
     insertAtEnd(10);
     insertAtEnd(20);
     insertAtBeginning(5);
-    traverse(); // 5 -> 10 -> 20 -> NULL
+    traverse();
 
     printf("Found 10 at position: %d\n", search(10));
     printf("Found 20 at position: %d\n", search(20));
@@ -99,7 +93,7 @@ int main() {
     printf("Found 15 at position: %d\n", search(15));
 
     deleteNode(10);
-    traverse(); // 5 -> 20 -> NULL
+    traverse();
 
     return 0;
 }
