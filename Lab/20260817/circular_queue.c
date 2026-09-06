@@ -41,7 +41,6 @@ void dequeue(struct Queue *q) {
         return;
     }
     if (q->front == q->rear) {
-        // Last element removed; reset queue
         q->front = -1;
         q->rear = -1;
     } else {
