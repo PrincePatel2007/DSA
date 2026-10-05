@@ -57,3 +57,5 @@ void traverse(struct Queue *q) {
         printf("%d", i%MAX);
     }
 }
+
+// made changes
