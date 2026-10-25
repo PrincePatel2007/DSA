@@ -1,8 +1,9 @@
 #include <stdio.h>
+
 struct queue{
     int rear, front;
     int arr[20];
-    };
+};
 
 int isfull(struct queue *q){
     if(q->rear==19)
